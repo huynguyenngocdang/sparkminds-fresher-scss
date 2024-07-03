@@ -1,0 +1,92 @@
+.navbar {
+  &__icon {
+    img {
+      width: $logoHeader;
+      height: $logoHeader;
+    }
+  }
+
+  &__container {
+    padding: 0 25px;
+    margin: 0 calc((95 / 1536) * 100vw);
+    @include flexOptimized(
+      (
+        fd: row,
+        ai: center,
+        jc: space-between,
+      )
+    );
+
+    @include maxWidth($maxMiddleScreen) {
+      margin: 0 25px;
+    }
+  }
+
+  &__logo {
+    display: inline;
+    img {
+      width: 99px;
+      height: 65px;
+    }
+  }
+
+  &__hamburger {
+    display: none;
+
+    @include maxWidth($maxMiddleScreen) {
+      display: block;
+      img {
+        width: $logoHeader;
+        height: $logoHeader;
+      }
+    }
+  }
+
+  &__main {
+    @include flexOptimized(
+      (
+        fd: row,
+        ai: center,
+        jc: space-between,
+        gap: 50px,
+      )
+    );
+    font-size: var(--title-xs);
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 15px;
+      font-size: var(--title-xs);
+      font-weight: 700;
+      li {
+        display: inline-block;
+      }
+      @include maxWidth($maxMiddleScreen) {
+        display: none;
+      }
+    }
+
+    &.active {
+      ul {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+
+  &__icon {
+    position: relative;
+    padding: 25px 0;
+    min-width: 118px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.logo-map {
+  @include maxWidth($maxMiddleScreen) {
+    display: none;
+  }
+}

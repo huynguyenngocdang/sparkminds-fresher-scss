@@ -1,0 +1,8 @@
+mixin dynamicList(title, items)
+    ul
+        h3=title
+        each item in items
+            li=item
+
+mixin imagePNG(name)
+  img(src=`../image/${name}.png`, alt=`${name}`, class=`${name}`)
