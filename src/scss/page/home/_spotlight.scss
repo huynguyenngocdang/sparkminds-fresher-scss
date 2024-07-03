@@ -1,0 +1,43 @@
+.spotlight {
+  padding: 0 30px;
+  margin: 0 auto;
+  max-width: 1900px;
+  &__container {
+    margin-top: 60px;
+  }
+
+  &__productTitle {
+    text-align: center;
+    font-size: var(--title-xl);
+    color: var(--color-gray-800);
+    margin-bottom: 35px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 0 -15px;
+    margin-top: -15px;
+    margin-bottom: -15px;
+  }
+
+  &__card {
+    img {
+      display: block;
+      overflow: hidden;
+    }
+    &__body {
+      text-align: center;
+    }
+    &__title {
+      color: var(--color-gray-800);
+      font-size: var(--title-sm);
+    }
+    &__context {
+      color: var(--color-gray-800);
+      font-size: var(--text-sm);
+      margin-top: 8px;
+    }
+  }
+}

@@ -1,25 +1,25 @@
-header.header
-    nav.navbar
-        .navbar__container
-            button.navbar__hamburger#hamburgerButton
-                span.material-symbols-outlined
-                    | menu
-            .navbar__main#navbarMain
-                .navbar__logo
-                    a(href="#") 
-                        +imagePNG('logo-header')
-                ul.navbar__items
-                    li.navbar__item
-                        a(href="#") Sản phẩm
-                    li.navbar__item 
-                        a(href="#") Giải pháp AIoT
-                    li.navbar__item 
-                        a(href="#") Có gì mới
-                    li.navbar__item 
-                        a(href="#") Hỗ trợ
-                    li.navbar__item 
-                        a(href="#") Cộng đồng    
-            .navbar__icon 
-                +imagePNG('logo-account')
-                +imagePNG('logo-map')
-                +imagePNG('logo-search')
+header#header
+    nav.nav
+        .nav__container 
+            button.mainArea__hamburger
+                +linkLogo("menu")
+            .mainArea__main
+                a(href="#", target="_blank", rel="noopener noreferrer")
+                    +imagePNG(`logo-header`)
+                ul.menuAction
+                    li.menuAction__item
+                        +link("Sản phẩm")
+                    li.menuAction__item
+                        +link("Giải pháp AIoT")
+                    li.menuAction__item
+                        +link("Có gì mới")
+                    li.menuAction__item
+                        +link("Hỗ trợ")
+                    li.menuAction__item
+                        +link("Cộng đồng")
+            .mainArea__operation
+                +linkLogo("logo-account")
+                +linkLogo("logo-map")
+                +linkLogo("logo-search")
+
+

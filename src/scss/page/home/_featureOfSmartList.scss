@@ -1,0 +1,61 @@
+.featureOfSmartList {
+  background-color: var(--color-gray-100);
+  padding-bottom: 85px;
+  text-align: center;
+
+  &__productTitle {
+    text-align: center;
+    color: var(--color-gray-800);
+    font-size: var(--title-xl);
+    margin-bottom: 52px;
+  }
+
+  &__container {
+    padding: 0 30px;
+    margin: 0 auto;
+    max-width: 1900px;
+  }
+
+  &__row {
+    @include minWidth($minMiddleScreen) {
+      justify-content: flex-start;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+    justify-content: center;
+  }
+
+  &__col {
+    @include minWidth($minMiddleScreen) {
+      flex: 0 0 260px;
+    }
+    @include minWidth($minLargeScreen) {
+      flex: 1 0 0;
+    }
+    padding: 15px;
+    img {
+      display: block;
+      width: 60px;
+      height: 60px;
+      margin: 0 auto;
+      @include minWidth($minMiddleScreen) {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+  &__product {
+    background-color: var(--color-gray-100);
+    padding: 15px 10px;
+    @include minWidth($minLargeScreen) {
+      padding: 15px 15px;
+    }
+  }
+  &__title {
+    font-size: 16px;
+    @include minWidth($minLargeScreen) {
+      font-size: var(--title-sm);
+    }
+  }
+}

@@ -1,92 +1,49 @@
-.navbar {
-  &__icon {
-    img {
-      width: $logoHeader;
-      height: $logoHeader;
-    }
-  }
+.nav__container {
+  padding: 7px 25px;
+  margin: 0 calc((95 / 1536) * 100vw);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  &__container {
-    padding: 0 25px;
-    margin: 0 calc((95 / 1536) * 100vw);
-    @include flexOptimized(
-      (
-        fd: row,
-        ai: center,
-        jc: space-between,
-      )
-    );
-
-    @include maxWidth($maxMiddleScreen) {
-      margin: 0 25px;
-    }
-  }
-
-  &__logo {
-    display: inline;
-    img {
-      width: 99px;
-      height: 65px;
-    }
-  }
-
+.mainArea {
   &__hamburger {
     display: none;
-
-    @include maxWidth($maxMiddleScreen) {
-      display: block;
-      img {
-        width: $logoHeader;
-        height: $logoHeader;
-      }
-    }
   }
 
   &__main {
-    @include flexOptimized(
-      (
-        fd: row,
-        ai: center,
-        jc: space-between,
-        gap: 50px,
-      )
-    );
-    font-size: var(--title-xs);
-    ul {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      gap: 15px;
-      font-size: var(--title-xs);
-      font-weight: 700;
-      li {
-        display: inline-block;
-      }
-      @include maxWidth($maxMiddleScreen) {
-        display: none;
-      }
-    }
-
-    &.active {
-      ul {
-        display: flex !important;
-        flex-direction: column;
-        align-items: center;
-      }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    img {
+      width: $logoIcon;
+      display: inline-block;
     }
   }
-
-  &__icon {
-    position: relative;
-    padding: 25px 0;
-    min-width: 118px;
+  &__operation {
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
+    padding: 25px 0;
+    position: relative;
+    gap: 13px;
+    img {
+      width: $logoHeader;
+    }
+    @include minWidth($minLargeScreen) {
+      margin-left: 50px;
+    }
+    @include minWidth($minMiddleScreen) {
+      margin-left: 0px;
+    }
   }
 }
 
-.logo-map {
-  @include maxWidth($maxMiddleScreen) {
-    display: none;
-  }
+.menuAction {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 45px;
+  font-size: var(--text-md);
+  font-weight: 700;
 }

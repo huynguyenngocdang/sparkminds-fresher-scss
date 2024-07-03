@@ -8,29 +8,260 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-    <link rel="stylesheet" href="./css/main.css">
     <script src="js/navigation.js" defer></script>
+    <script src="https://kit.fontawesome.com/805854e023.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/main.css">
   </head>
   <body>
-    <header class="header">
-      <nav class="navbar">
-        <div class="navbar__container">
-          <button class="navbar__hamburger" id="hamburgerButton"><span class="material-symbols-outlined">menu</span></button>
-          <div class="navbar__main" id="navbarMain">
-            <div class="navbar__logo"><a href="#"> <img class="logo-header" src="../image/logo-header.png" alt="logo-header"/></a></div>
-            <ul class="navbar__items">
-              <li class="navbar__item"><a href="#">Sản phẩm</a></li>
-              <li class="navbar__item"> <a href="#">Giải pháp AIoT</a></li>
-              <li class="navbar__item"> <a href="#">Có gì mới</a></li>
-              <li class="navbar__item"> <a href="#">Hỗ trợ</a></li>
-              <li class="navbar__item"> <a href="#">Cộng đồng    </a></li>
+    <header id="header">
+      <nav class="nav">
+        <div class="nav__container"> 
+          <button class="mainArea__hamburger"><a href="#" target="_blank" rel="noopener noreferrer"><img class="menu" src="../image/menu.png" alt="menu"/></a>
+          </button>
+          <div class="mainArea__main"><a href="#" target="_blank" rel="noopener noreferrer"><img class="logo-header" src="../image/logo-header.png" alt="logo-header"/></a>
+            <ul class="menuAction">
+              <li class="menuAction__item"><a href="#" target="_blank" rel="noopener noreferrer">Sản phẩm</a>
+              </li>
+              <li class="menuAction__item"><a href="#" target="_blank" rel="noopener noreferrer">Giải pháp AIoT</a>
+              </li>
+              <li class="menuAction__item"><a href="#" target="_blank" rel="noopener noreferrer">Có gì mới</a>
+              </li>
+              <li class="menuAction__item"><a href="#" target="_blank" rel="noopener noreferrer">Hỗ trợ</a>
+              </li>
+              <li class="menuAction__item"><a href="#" target="_blank" rel="noopener noreferrer">Cộng đồng</a>
+              </li>
             </ul>
           </div>
-          <div class="navbar__icon"> <img class="logo-account" src="../image/logo-account.png" alt="logo-account"/><img class="logo-map" src="../image/logo-map.png" alt="logo-map"/><img class="logo-search" src="../image/logo-search.png" alt="logo-search"/>
+          <div class="mainArea__operation"><a href="#" target="_blank" rel="noopener noreferrer"><img class="logo-account" src="../image/logo-account.png" alt="logo-account"/></a><a href="#" target="_blank" rel="noopener noreferrer"><img class="logo-map" src="../image/logo-map.png" alt="logo-map"/></a><a href="#" target="_blank" rel="noopener noreferrer"><img class="logo-search" src="../image/logo-search.png" alt="logo-search"/></a>
           </div>
         </div>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <section class="sliderPart">
+        <div class="slider"><i class="fa-solid fa-chevron-left slider__prev"></i>
+          <div class="slider__wrapper">
+            <div class="slider__main">
+              <div class="slider__item"><img class="banner-1" src="../image/banner-1.jpeg" alt="banner-1"/>
+              </div>
+              <div class="slider__item"><img class="banner-2" src="../image/banner-2.jpeg" alt="banner-2"/>
+              </div>
+              <div class="slider__item"><img class="banner-3" src="../image/banner-3.jpeg" alt="banner-3"/>
+              </div>
+              <div class="slider__item"><img class="banner-4" src="../image/banner-4.jpeg" alt="banner-4"/>
+              </div>
+            </div>
+          </div><i class="fa-solid fa-chevron-right slider__next"></i>
+        </div>
+      </section>
+      <section class="announce">
+        <div class="announce__container">
+          <div class="announce__wrapper">
+            <h2 class="announce__title">Announcement</h2>
+            <div class="announce__contentWrapper"><span class="announce__content">Chúng tôi vui mừng thông báo rằng chúng tôi sẽ ra mắt Dịch vụ hỗ trợ máy tính từ xa cho người dùng máy tính xách tay MSI tại Việt Nam. Vui lòng bấm vào đây để tìm hiểu thêm.  </span><a href="#" target="_blank" rel="noopener noreferrer">More &gt;</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="spotlight">
+        <div class="spotlight__container">
+          <h2 class="spotlight__productTitle">Discover the Latest MSI Innovations</h2>
+          <div class="spotlight__row">
+            <div class="spotlight__card"><img class="spotlight-1" src="../image/spotlight-1.jpeg" alt="spotlight-1"/>
+              <div class="spotlight__card__body">
+                <h3 class="spotlight__card__title">Claw A1M</h3>
+                <p class="spotlight__card__context">Grip and Game</p>
+              </div>
+            </div>
+            <div class="spotlight__card"><img class="spotlight-2" src="../image/spotlight-2.jpeg" alt="spotlight-2"/>
+              <div class="spotlight__card__body">
+                <h3 class="spotlight__card__title">QD-OLED Series Gaming Monitors</h3>
+                <p class="spotlight__card__context">Brighter Colors, Sublime Black Levels</p>
+              </div>
+            </div>
+            <div class="spotlight__card"><img class="spotlight-3" src="../image/spotlight-3.jpeg" alt="spotlight-3"/>
+              <div class="spotlight__card__body">
+                <h3 class="spotlight__card__title">GeForce RTX™ 40 GAMING Series</h3>
+                <p class="spotlight__card__context">Play Hard Stay Silent</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="odmSpotlight">
+        <h2 class="odmSpotlight__productTitle">Trao quyền cho doanh nghiệp của bạn với các giải pháp AIoT</h2>
+        <div class="odmSpotlight__container">
+          <div class="odmSpotlight__row">
+            <div class="odmSpotlight__col">
+              <div class="odmSpotlight__card"><img class="odm-1" src="../image/odm-1.jpeg" alt="odm-1"/>
+                <div class="odmSpotlight__card__body">
+                  <h3 class="odmSpotlight__card__title">Giải pháp sạc EV</h3>
+                  <p class="odmSpotlight__card__context">Sạc thông minh cho doanh nghiệp và gia đình</p>
+                </div>
+              </div>
+            </div>
+            <div class="odmSpotlight__col relative">
+              <div class="odmSpotlight__card"><img class="odm-2" src="../image/odm-2.jpeg" alt="odm-2"/>
+                <div class="odmSpotlight__card__body">
+                  <h3 class="odmSpotlight__card__title">Robot di động tự động (AMR)</h3>
+                  <p class="odmSpotlight__card__context">AI, Tự động hóa và Robotics</p>
+                </div>
+              </div>
+              <div class="odmSpotlight__card absolute"><img class="odm-3" src="../image/odm-3.jpeg" alt="odm-3"/>
+                <div class="odmSpotlight__card__body">
+                  <h3 class="odmSpotlight__card__title">Rugged Tablet</h3>
+                  <p class="odmSpotlight__card__context">Dịch vụ thiết kế và sản xuất chuyên nghiệp</p>
+                </div>
+              </div>
+            </div>
+            <div class="odmSpotlight__col relative">
+              <div class="odmSpotlight__card"><img class="odm-4" src="../image/odm-4.jpeg" alt="odm-4"/>
+                <div class="odmSpotlight__card__body">
+                  <h3 class="odmSpotlight__card__title">Automotive và thương mại</h3>
+                  <p class="odmSpotlight__card__context">Đối tác ODM tốt nhất của bạn về Giải pháp AIoT</p>
+                </div>
+              </div>
+              <div class="odmSpotlight__card absolute"><img class="odm-5" src="../image/odm-5.jpeg" alt="odm-5"/>
+                <div class="odmSpotlight__card__body">
+                  <h3 class="odmSpotlight__card__title">AIoT &amp; Giải pháp Công nghiệp</h3>
+                  <p class="odmSpotlight__card__context">Cung cấp bo mạch &amp; hệ thống nhúng với sự hỗ trợ lâu dài</p>
+                </div>
+              </div>
+            </div>
+            <div class="odmSpotlight__col relative">
+              <div class="odmSpotlight__card"><img class="odm-6" src="../image/odm-6.jpeg" alt="odm-6"/>
+                <div class="odmSpotlight__card__body">
+                  <h3 class="odmSpotlight__card__title">Máy chủ, Mạng &amp; IIoT</h3>
+                  <p class="odmSpotlight__card__context">Tiền thân là nhà cung cấp phần cứng toàn cầu</p>
+                </div>
+              </div>
+              <div class="odmSpotlight__card absolute"><img class="odm-7" src="../image/odm-7.jpeg" alt="odm-7"/>
+                <div class="odmSpotlight__card__body">
+                  <h3 class="odmSpotlight__card__title">Giải pháp FUTORO</h3>
+                  <p class="odmSpotlight__card__context">Dẫn đầu toàn cầu về thông tin giải trí và viễn thông trên xe</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="featureOfSmartList"> 
+        <h2 class="featureOfSmartList__productTitle">The Future of Smart</h2><a class="featureOfSmartList__container">
+          <div class="featureOfSmartList__row">
+            <div class="featureOfSmartList__col"><img class="smart-1" src="../image/smart-1.png" alt="smart-1"/>
+              <div class="featureOfSmartList__product">
+                <h3 class="featureOfSmartList__title">EV Charger</h3>
+              </div>
+            </div>
+            <div class="featureOfSmartList__col"><img class="smart-2" src="../image/smart-2.png" alt="smart-2"/>
+              <div class="featureOfSmartList__product">
+                <h3 class="featureOfSmartList__title">Server</h3>
+              </div>
+            </div>
+            <div class="featureOfSmartList__col"><img class="smart-3" src="../image/smart-3.png" alt="smart-3"/>
+              <div class="featureOfSmartList__product">
+                <h3 class="featureOfSmartList__title">Automotive &amp; Commercial</h3>
+              </div>
+            </div>
+            <div class="featureOfSmartList__col"><img class="smart-4" src="../image/smart-4.png" alt="smart-4"/>
+              <div class="featureOfSmartList__product">
+                <h3 class="featureOfSmartList__title">FUNTORO</h3>
+              </div>
+            </div>
+            <div class="featureOfSmartList__col"><img class="smart-5" src="../image/smart-5.png" alt="smart-5"/>
+              <div class="featureOfSmartList__product">
+                <h3 class="featureOfSmartList__title">Autonomous Mobile Robot</h3>
+              </div>
+            </div>
+            <div class="featureOfSmartList__col"><img class="smart-6" src="../image/smart-6.png" alt="smart-6"/>
+              <div class="featureOfSmartList__product">
+                <h3 class="featureOfSmartList__title">AIoT &amp; Industrial</h3>
+              </div>
+            </div>
+            <div class="featureOfSmartList__col"><img class="smart-7" src="../image/smart-7.png" alt="smart-7"/>
+              <div class="featureOfSmartList__product">
+                <h3 class="featureOfSmartList__title">Rugged Tablet</h3>
+              </div>
+            </div>
+          </div></a>
+      </section>
+    </main>
+    <footer class="footer"> 
+      <div class="footer-container">
+        <div class="footer-shortcut">
+          <div class="footer-column">
+                <ul>
+                  <h3>CỘNG ĐỒNG</h3>
+                  <li>Tin tức từ MSI</li>
+                  <li>Blog</li>
+                  <li>Video</li>
+                  <li>Mạng xã hội</li>
+                  <li>Diễn đàn</li>
+                  <li>Đội game</li>
+                  <li>Chia sẻ từ khách hàng</li>
+                </ul>
+          </div>
+          <div class="footer-column">
+                <ul>
+                  <h3>HỖ TRỢ</h3>
+                  <li>Tải xuống</li>
+                  <li>Trung tâm thành viên</li>
+                  <li>Chăm sóc khách hàng trực tuyến</li>
+                  <li>Địa chỉ trung tâm bảo hành</li>
+                  <li>Bảo hành</li>
+                  <li>Hỗ trợ từ xa</li>
+                </ul>
+          </div>
+          <div class="footer-column">
+                <ul>
+                  <h3>TIN TỨC</h3>
+                  <li>Báo chí</li>
+                  <li>Giải thưởng</li>
+                  <li>Video</li>
+                  <li>RSS</li>
+                  <li>Lời chia sẻ</li>
+                  <li>Blogs</li>
+                  <li>Tin tức</li>
+                </ul>
+          </div>
+          <div class="footer-column">
+                <ul>
+                  <h3>VỀ MSI</h3>
+                  <li>Về MSI</li>
+                  <li>Tầm nhìn và Sứ mệnh</li>
+                  <li>Câu chuyện Thương hiệu</li>
+                  <li>Thông tin cho nhà đầu tư</li>
+                  <li>Không ngừng sáng tạo</li>
+                  <li>Chứng nhận</li>
+                  <li>CSR</li>
+                  <li>Tiêu chuẩn về chất lượng</li>
+                </ul>
+          </div>
+          <div class="footer-column">
+                <ul>
+                  <h3>TRUYỀN THÔNG</h3>
+                  <li>Cẩm nang Sản phẩm</li>
+                  <li>Hình nền</li>
+                  <li>Ứng dụng của MSI</li>
+                  <li>Tính công suất PSU</li>
+                </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-left"><img class="footer-bottom-logo" src="../image/logo-footer.png" alt="msi">
+            <p>Copyright © 2024 Micro-Star INT'L CO., LTD. All rights reserved.</p>
+          </div>
+          <div class="footer-bottom-right">
+            <ul>
+              <li>Cookie Policy</li>
+              <li>Chính sách bảo vệ thông tin</li>
+              <li>Điều khoản sử dụng</li>
+              <li>Liên hệ</li>
+              <li>Vietnam / Tiếng Việt</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
