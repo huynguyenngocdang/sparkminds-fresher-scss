@@ -750,14 +750,16 @@ body {
   position: relative;
 }
 .slider__main {
-  width: 100%;
-  height: 600px;
-  overflow: hidden;
+  height: 100%;
   display: flex;
   position: relative;
+  transition: transform 0.25s linear;
 }
 .slider__item {
+  height: 100%;
+  width: 100%;
   flex: 1 0 100%;
+  user-select: none;
 }
 .slider__item img {
   width: 100%;
@@ -850,11 +852,21 @@ body {
 }
 .spotlight__row {
   display: flex;
-  justify-content: space-between;
-  gap: 30px;
   margin: 0 -15px;
+  flex-wrap: wrap;
   margin-top: -15px;
   margin-bottom: -15px;
+}
+.spotlight__col {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+@media screen and (min-width: 768px) {
+  .spotlight__col {
+    padding-left: 15px;
+    padding-right: 15px;
+    flex: 0 0 33.3333333333%;
+  }
 }
 .spotlight__card__wrapper {
   display: block;
@@ -864,7 +876,7 @@ body {
   background-color: var(--color-gray-200);
 }
 .spotlight__card:hover .spotlight__card__image {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 .spotlight__card__image {
   width: 100%;
@@ -877,7 +889,8 @@ body {
 }
 .spotlight__card__title {
   color: var(--color-gray-800);
-  font-size: var(--title-sm);
+  font-size: 20px;
+  padding: 10px 0;
 }
 .spotlight__card__context {
   color: var(--color-gray-800);

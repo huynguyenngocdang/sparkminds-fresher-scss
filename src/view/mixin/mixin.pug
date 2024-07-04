@@ -25,12 +25,13 @@ mixin linkLogo(name)
         img(src=`../image/${name}.png`, alt=`${name}`, class=`${name}`)
 
 mixin spotlightCard(picture, title, context)
-  .spotlight__card
-    a.spotlight__card__wrapper
-      img(src=`../image/${picture}.jpeg`, alt=`${picture}`, class=`spotlight__card__image`)
-      .spotlight__card__body
-        h3.spotlight__card__title=title
-        p.spotlight__card__context=context
+  .spotlight__col
+    .spotlight__card
+      a.spotlight__card__wrapper
+        img(src=`../image/${picture}.jpeg`, alt=`${picture}`, class=`spotlight__card__image`)
+        .spotlight__card__body
+          h3.spotlight__card__title=title
+          p.spotlight__card__context=context
 
 mixin odmSpotlightCard(picture, title, context)
     img(src=`../image/${picture}.jpeg`, alt=`${picture}`, class=`odmSpotlight__card__image`)

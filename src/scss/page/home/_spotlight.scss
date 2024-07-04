@@ -2,6 +2,7 @@
   padding: 0 30px;
   margin: 0 auto;
   max-width: 1900px;
+
   &__container {
     margin-top: 60px;
   }
@@ -14,12 +15,27 @@
   }
 
   &__row {
+    // display: flex;
+    // justify-content: space-between;
+    // gap: 30px;
+    // margin: 0 -15px;
+    // margin-top: -15px;
+    // margin-bottom: -15px;
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
     margin: 0 -15px;
+    flex-wrap: wrap;
     margin-top: -15px;
     margin-bottom: -15px;
+  }
+
+  &__col {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    @include minWidth($minMiddleScreen) {
+      padding-left: 15px;
+      padding-right: 15px;
+      flex: 0 0 33.3333333333%;
+    }
   }
 
   &__card {
@@ -32,7 +48,7 @@
         background-color: var(--color-gray-200);
       }
       .spotlight__card__image {
-        transform: scale(1.05);
+        transform: scale(1.02);
       }
     }
 
@@ -48,7 +64,8 @@
     }
     &__title {
       color: var(--color-gray-800);
-      font-size: var(--title-sm);
+      font-size: 20px;
+      padding: 10px 0;
     }
     &__context {
       color: var(--color-gray-800);
