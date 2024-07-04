@@ -781,6 +781,9 @@ body {
   max-width: 16px;
   vertical-align: text-bottom;
 }
+.footer__service__item:hover {
+  text-decoration: underline;
+}
 .footer__service__link {
   color: var(--color-gray-600);
   font-size: var(--note-md);
