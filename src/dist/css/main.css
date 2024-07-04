@@ -618,7 +618,27 @@ body {
 }
 
 .mainArea__hamburger {
+  font-family: "msi-icons" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  padding: 10px 16px;
+  color: #000;
   display: none;
+  font-size: 36px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  position: relative;
+}
+@media screen and (max-width: 1199.98px) {
+  .mainArea__hamburger {
+    display: inline-block;
+  }
 }
 .mainArea__main {
   display: flex;
@@ -634,7 +654,6 @@ body {
   display: flex;
   align-items: center;
   padding: 25px 0;
-  position: relative;
   gap: 13px;
 }
 .mainArea__operation img {
@@ -658,6 +677,35 @@ body {
   gap: 45px;
   font-size: var(--text-md);
   font-weight: 700;
+}
+@media screen and (max-width: 1199.98px) {
+  .menuAction {
+    display: none;
+  }
+}
+
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.dropdown-menu .menuDropdown__item {
+  padding: 10px 20px;
+  text-align: left;
+}
+.dropdown-menu .menuDropdown__item a {
+  width: 100%;
+  display: block;
+}
+
+.dropdown-menu.show {
+  display: flex;
 }
 
 .footer {

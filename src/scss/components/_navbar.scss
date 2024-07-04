@@ -8,7 +8,26 @@
 
 .mainArea {
   &__hamburger {
+    font-family: "msi-icons" !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    padding: 10px 16px;
+    color: #000;
     display: none;
+    font-size: 36px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    position: relative;
+
+    @include maxWidth($maxMiddleScreen) {
+      display: inline-block;
+    }
   }
 
   &__main {
@@ -21,11 +40,11 @@
       display: inline-block;
     }
   }
+
   &__operation {
     display: flex;
     align-items: center;
     padding: 25px 0;
-    position: relative;
     gap: 13px;
     img {
       width: $logoHeader;
@@ -46,4 +65,34 @@
   gap: 45px;
   font-size: var(--text-md);
   font-weight: 700;
+  @include maxWidth($maxMiddleScreen) {
+    display: none;
+  }
+}
+
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  .menuDropdown {
+    &__item {
+      padding: 10px 20px;
+      text-align: left;
+
+      a {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+}
+
+.dropdown-menu.show {
+  display: flex;
 }
