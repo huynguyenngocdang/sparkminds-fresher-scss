@@ -22,29 +22,38 @@
     }
     display: flex;
     flex-wrap: wrap;
-    // margin: -15px;
+    margin: -15px;
     justify-content: center;
   }
 
   &__col {
+    padding: 15px;
+    color: var(--color-gray-800);
+    &:hover {
+      .featureOfSmartList__image {
+        transform: scale(1.05);
+      }
+    }
     @include minWidth($minMiddleScreen) {
       flex: 0 0 260px;
     }
     @include minWidth($minLargeScreen) {
       flex: 1 0 0;
     }
-    padding: 15px;
-    img {
-      display: block;
-      width: 60px;
-      height: 60px;
-      margin: 0 auto;
-      @include minWidth($minMiddleScreen) {
-        width: 100px;
-        height: 100px;
-      }
+  }
+
+  &__image {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    transition: transform 0.3s;
+    @include minWidth($minMiddleScreen) {
+      width: 100px;
+      height: 100px;
     }
   }
+
   &__product {
     background-color: var(--color-gray-100);
     padding: 15px 10px;

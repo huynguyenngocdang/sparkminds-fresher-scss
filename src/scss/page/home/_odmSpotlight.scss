@@ -47,10 +47,21 @@
         left: 15px;
       }
     }
-    img {
+    &:hover {
+      .odmSpotlight__card {
+        background-color: var(--color-gray-200);
+      }
+      .odmSpotlight__card__image {
+        transform: scale(1.02);
+      }
+    }
+
+    &__image {
       display: block;
       overflow: hidden;
+      transition: transform 0.3s;
     }
+
     &__body {
       @include minWidth($minLargeScreen) {
         padding: 15px 15px 24px;

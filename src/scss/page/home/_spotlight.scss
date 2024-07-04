@@ -23,10 +23,26 @@
   }
 
   &__card {
-    img {
+    &__wrapper {
       display: block;
       overflow: hidden;
     }
+    &:hover {
+      .spotlight__card__wrapper {
+        background-color: var(--color-gray-200);
+      }
+      .spotlight__card__image {
+        transform: scale(1.05);
+      }
+    }
+
+    &__image {
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+      transition: transform 0.3s;
+    }
+
     &__body {
       text-align: center;
     }

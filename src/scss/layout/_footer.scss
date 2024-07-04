@@ -38,6 +38,9 @@
       color: var(--color-gray-600);
       font-size: var(--link-sm);
     }
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__info {

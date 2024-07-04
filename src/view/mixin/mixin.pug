@@ -26,19 +26,20 @@ mixin linkLogo(name)
 
 mixin spotlightCard(picture, title, context)
   .spotlight__card
-    img(src=`../image/${picture}.jpeg`, alt=`${picture}`, class=`${picture}`)
-    .spotlight__card__body
-      h3.spotlight__card__title=title
-      p.spotlight__card__context=context
+    a.spotlight__card__wrapper
+      img(src=`../image/${picture}.jpeg`, alt=`${picture}`, class=`spotlight__card__image`)
+      .spotlight__card__body
+        h3.spotlight__card__title=title
+        p.spotlight__card__context=context
 
 mixin odmSpotlightCard(picture, title, context)
-    img(src=`../image/${picture}.jpeg`, alt=`${picture}`, class=`${picture}`)
+    img(src=`../image/${picture}.jpeg`, alt=`${picture}`, class=`odmSpotlight__card__image`)
     .odmSpotlight__card__body
       h3.odmSpotlight__card__title=title
       p.odmSpotlight__card__context=context
 
 mixin smartCard(picture, title)
-  img(src=`../image/${picture}.png`, alt=`${picture}`, class=`${picture}`)
+  img(src=`../image/${picture}.png`, alt=`${picture}`, class=`featureOfSmartList__image`)
   .featureOfSmartList__product
     h3.featureOfSmartList__title=title
 
