@@ -1,0 +1,75 @@
+.socialMarketing {
+  padding: 0 30px;
+  margin: 0 auto;
+  max-width: 1900px;
+
+  &__container {
+    margin-top: 45px;
+  }
+
+  &__row {
+    display: flex;
+    margin: 0 -15px;
+    flex-wrap: wrap;
+    margin-top: -15px;
+    margin-bottom: -15px;
+  }
+
+  &__col {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    flex: 0 0 100%;
+    @include minWidth($minLargeScreen) {
+      padding-left: 15px;
+      padding-right: 15px;
+      flex: 0 0 50%;
+    }
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+      .socialMarketing__body {
+        background-color: rgba(128, 128, 128, 0.4);
+        color: var(--color-white);
+      }
+      .socialMarketing__image {
+        transform: scale(1.02);
+      }
+    }
+  }
+  &__image {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    transition: transform 0.3s;
+  }
+
+  &__body {
+    text-align: center;
+    background-color: var(--color-gray-100);
+    padding: 15px 25px;
+    color: var(--color-gray-800);
+
+    @include minWidth($minLargeScreen) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: left;
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  &__title {
+    font-size: var(--title-sm);
+  }
+
+  &__context {
+    font-size: var(--text-sm);
+  }
+}

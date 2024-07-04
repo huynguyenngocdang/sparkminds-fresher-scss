@@ -1,0 +1,63 @@
+.serviceArea {
+  width: 100%;
+  position: relative;
+  padding: 0 25px;
+  margin: 0 auto;
+  @include minWidth($minLargeScreen) {
+    max-width: 1280px;
+    padding: 0;
+  }
+
+  &__container {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  &__row {
+    display: flex;
+    margin: 0 -15px;
+    flex-wrap: wrap;
+    margin-top: -15px;
+    margin-bottom: -15px;
+  }
+
+  &__col {
+    padding-left: 15px;
+    padding-right: 15px;
+    flex: 0 0 50%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    @include minWidth($maxSmallScreen) {
+      padding-left: 15px;
+      padding-right: 15px;
+      flex: 0 0 25%;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    text-align: center;
+    color: var(--color-gray-800);
+  }
+
+  &__icon {
+    font-size: 45px;
+  }
+
+  &__linkIcon {
+    font-family: "msi-icons" !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    vertical-align: middle;
+  }
+
+  &__title {
+    font-size: var(--link-sm);
+    margin-top: 12px;
+    position: relative;
+  }
+}

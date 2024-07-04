@@ -1,8 +1,14 @@
 mixin dynamicList(title, items)
-    ul
-        h3=title
-        each item in items
-            li=item
+  li.footer__item
+    .footer__field=title
+    ul.footer__submenu
+      each item in items
+        li.footer__subitem
+          a(href="#", target="_blank", rel="noopener noreferrer")=item
+
+mixin dynamicService(name)
+  li.footer__service__item
+    a(href="#", target="_blank", rel="noopener noreferrer", class="footer__service__link")=name
 
 mixin imagePNG(name)
   img(src=`../image/${name}.png`, alt=`${name}`, class=`${name}`)
@@ -35,3 +41,17 @@ mixin smartCard(picture, title)
   img(src=`../image/${picture}.png`, alt=`${picture}`, class=`${picture}`)
   .featureOfSmartList__product
     h3.featureOfSmartList__title=title
+
+mixin serviceIcon(iconType, title)
+  a(href="#", target="_blank", rel="noopener noreferrer", class="serviceArea__link")
+    .serviceArea__icon
+      span(class="serviceArea__linkIcon "+iconType)
+    span.serviceArea__title=title
+
+mixin socialMarketing(picture, title, context)
+    a(href="#", target="_blank", rel="noopener noreferrer", class="socialMarketing__link")
+      figure.socialMarketingWrapper
+        img(src=`../image/${picture}.webp`, alt=`${picture}`, class="socialMarketing__image")
+      .socialMarketing__body
+        h3.socialMarketing__title=title
+        p.socialMarketing__context=context

@@ -1,57 +1,83 @@
 .footer {
-  padding: 1px 0;
-  &-container {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 95px;
+  background: #fff;
+  color: #666;
+  border-top: 1px solid #ececec;
+  margin-top: 45px;
+  &__container {
+    max-width: 1330px;
+    margin: auto;
     padding: 0 25px;
   }
 
-  &-shortcut {
-    color: #666;
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    font-size: var(--text-md);
-    padding: 40px 0px;
+  &__shortcut {
+    padding: 40px 0 45px;
     width: 100%;
+    display: flex;
   }
 
-  &-column {
-    min-width: 150px;
-    margin: 0 15px;
+  &__menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__field {
+    padding-bottom: 15px;
     color: var(--color-gray-600);
-    h3 {
-      font-size: var(--text-md);
-      font-weight: 700;
-      padding: 0 0 15px;
-      text-align: left;
-    }
-    ul {
-      padding: 0;
-      li {
-        padding: 6px 0;
-      }
+    font-size: var(--link-md);
+    font-weight: bold;
+  }
+
+  &__submenu {
+    transition: 0.5s;
+  }
+
+  &__subitem {
+    padding: 6px 0;
+    a {
+      color: var(--color-gray-600);
+      font-size: var(--link-sm);
     }
   }
-  &-bottom {
-    border-top: 1px solid var(--color-gray-200);
+
+  &__info {
+    display: flex;
+    border-top: 1px solid #ececec;
+    padding: 15px 0 30px 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__copyright {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 40px 0;
-    width: 100%;
-    font-size: 12px;
-    &-left {
-      display: flex;
+    font-size: 13px;
+    img {
+      width: 50px;
+      object-fit: contain;
+      margin-right: 10px;
     }
-    &-right {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+  }
+
+  &__legal {
+    color: var(--color-gray-600);
+    font-size: var(--note-md);
+  }
+
+  &__service {
+    display: flex;
+    align-items: center;
+    &__item {
+      margin-right: 15px;
+      img {
+        display: inline-block;
+        max-width: 16px;
+        vertical-align: text-bottom;
+      }
+    }
+    &__link {
+      color: var(--color-gray-600);
+      font-size: var(--note-md);
     }
   }
 }
